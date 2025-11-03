@@ -1,4 +1,4 @@
-# Smart Occupancy Management System (Task 6 - Team 10)
+# Smart Occupancy Management System (Team 10)
 
 Smart Occupancy Management System is a cloud-based platform for real-time building occupancy tracking. It evolved from a QR-based app to an automated system using Supabase for data updates and monitoring.
 

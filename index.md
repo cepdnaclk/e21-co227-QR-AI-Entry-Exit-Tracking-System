@@ -15,7 +15,7 @@ title: Smart Occupancy Management System (Team 10)
 - **E/21/229** – Kurera P.A.T., [e21229@eng.pdn.ac.lk](mailto:e21229@eng.pdn.ac.lk)
 - **E/21/287** – Perera G.S.H., [e21287@eng.pdn.ac.lk](mailto:e21287@eng.pdn.ac.lk)
 - **E/21/350** – Samarawickrama G.B.B.P., [e21350@eng.pdn.ac.lk](mailto:e21350@eng.pdn.ac.lk)
-- **E/21/428** – Weerasooriya S.C., [e21428@engdn.ac.lk](mailto:e21428@engdn.ac.lk)
+- **E/21/428** – Weerasooriya S.C., [e21428@eng.pdn.ac.lk](mailto:e21428@eng.pdn.ac.lk)
 
 ---
 

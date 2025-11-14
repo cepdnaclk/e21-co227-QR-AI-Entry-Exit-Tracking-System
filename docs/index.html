@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Occupancy Management System - QR + AI People Tracking</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Roboto", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f9;
+        color: #333;
+        line-height: 1.6;
+      }
+      header {
+        background: #0073e6;
+        color: white;
+        padding: 1rem 0;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      header img {
+        width: 100px;
+        margin-bottom: 0.5rem;
+      }
+      header h1 {
+        font-size: 2rem;
+        margin: 0.5rem 0;
+      }
+      section {
+        max-width: 1200px;
+        margin: 2rem auto;
+        padding: 1rem;
+      }
+      section h2 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+        color: #0073e6;
+      }
+      .team,
+      .features,
+      .tech-stack,
+      .screenshots {
+        margin-bottom: 2rem;
+      }
+      .team ul,
+      .features ul {
+        list-style-type: disc;
+        padding-left: 20px;
+      }
+      .features ul li {
+        background: none;
+        padding: 0.8rem;
+        margin: 0.5rem 0;
+        border-radius: 5px;
+        box-shadow: none;
+      }
+      .tech-stack div {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.5rem;
+      }
+      .tech-stack img {
+        width: 100px;
+        margin-right: 1rem;
+      }
+      .tech-stack p {
+        margin: 0;
+      }
+      .screenshots img {
+        width: 100%;
+        border-radius: 8px;
+        margin-bottom: 1rem;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+      .screenshots img:hover {
+        transform: scale(1.05);
+      }
+      .links a {
+        display: inline-block;
+        background: #0073e6;
+        color: white;
+        text-decoration: none;
+        padding: 0.8rem 1.2rem;
+        margin: 0.5rem;
+        border-radius: 5px;
+        transition: background 0.3s ease;
+      }
+      .links a:hover {
+        background: #005bb5;
+      }
+      footer {
+        text-align: center;
+        padding: 1rem;
+        background: #333;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img src="images/logo.png" alt="System Logo" />
+      <h1>Smart Occupancy Management System</h1>
+      <p>QR-Based Entry + AI Vision People Counting with Supabase Integration</p>
+    </header>
+
+    <section>
+      <!-- TEAM -->
+      <div class="team">
+        <h2>Team</h2>
+        <ul>
+          <li>
+            <strong>E/21/428:</strong> S. C. Weerasooriya – Mobile App Developer
+            (<a href="mailto:e21428@eng.pdn.ac.lk">e21428@eng.pdn.ac.lk</a>)
+          </li>
+        </ul>
+      </div>
+
+      <!-- FEATURES -->
+      <div class="features">
+        <h2>Features</h2>
+        <ul>
+          <li>
+            QR-based manual entry tracking using a mobile application.
+          </li>
+          <li>
+            Real-time building occupancy updates stored and managed through Supabase.
+          </li>
+          <li>
+            AI-powered people counting using YOLOv8 and ByteTrack to automate entry/exit detection.
+          </li>
+          <li>
+            Multi-building support with a centralized backend connected to a live dashboard.
+          </li>
+          <li>
+            REST API integration enabling communication across mobile app, AI service, and database.
+          </li>
+        </ul>
+      </div>
+
+      <!-- TECH STACK -->
+      <div class="tech-stack">
+        <h2>Technology and Implementation</h2>
+
+        <div>
+          <img src="images/mitapp.png" alt="MIT App Inventor" />
+          <p>
+            <strong>MIT App Inventor:</strong> Used to develop the exhibition-deployed mobile app for QR-based entry scanning.
+          </p>
+        </div>
+
+        <div>
+          <img src="images/node.png" alt="Node.js Backend" />
+          <p>
+            <strong>Node.js + Express:</strong> Backend API handling building states, logs, and AI data updates.
+          </p>
+        </div>
+
+        <div>
+          <img src="images/supabase.png" alt="Supabase" />
+          <p>
+            <strong>Supabase:</strong> Cloud database with RLS, real-time updates, triggers, and RPC functions.
+          </p>
+        </div>
+
+        <div>
+          <img src="images/python.png" alt="AI Vision System" />
+          <p>
+            <strong>Python + YOLOv8:</strong> AI people counting module with tracking, ROI detection, and video stream handling.
+          </p>
+        </div>
+      </div>
+
+      <!-- SCREENSHOTS -->
+      <div class="screenshots">
+        <h2>System Screenshots</h2>
+        <img src="images/mobile_app.png" alt="Mobile QR App Screenshot" />
+        <img src="images/dashboard.png" alt="Supabase Dashboard" />
+        <img src="images/ai_view.png" alt="AI Processing Window" />
+      </div>
+
+      <!-- LINKS -->
+      <div class="links">
+        <h2>Links</h2>
+        <a href="#" target="_blank">Project Repository</a>
+        <a href="#" target="_blank">Project Page</a>
+        <a href="http://www.ce.pdn.ac.lk/" target="_blank">
+          Department of Computer Engineering
+        </a>
+        <a href="https://eng.pdn.ac.lk/" target="_blank">
+          University of Peradeniya
+        </a>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Smart Occupancy Management System Team</p>
+    </footer>
+  </body>
+</html>

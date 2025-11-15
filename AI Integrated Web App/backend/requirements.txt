@@ -1,0 +1,19 @@
+# requirements.txt - Python Dependencies for AI People Counter
+
+# Deep Learning & Computer Vision
+ultralytics>=8.0.0
+opencv-python>=4.8.0
+supervision>=0.16.0
+
+# Web Framework
+flask>=2.3.0
+
+# HTTP Requests
+requests>=2.31.0
+
+# Environment Variables
+python-dotenv>=1.0.0
+
+# Optional: GPU Support (uncomment if using NVIDIA GPU)
+# torch>=2.0.0
+# torchvision>=0.15.0

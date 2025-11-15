@@ -1,0 +1,22 @@
+{
+  "buildings": {
+    "B13": {
+      "building_id": "B13",
+      "roi": {
+        "x1": 755,
+        "y1": 411,
+        "x2": 1185,
+        "y2": 1303
+      },
+      "video_path": "undefined_1761484178912.mp4",
+      "video_width": 2560,
+      "video_height": 1440,
+      "is_running": true,
+      "direction": "IN",
+      "current_counts": {
+        "enter": 0,
+        "exit": 0
+      }
+    }
+  }
+}

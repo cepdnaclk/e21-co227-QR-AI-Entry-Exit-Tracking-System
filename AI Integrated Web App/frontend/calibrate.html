@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Building Calibration | AI People Counter</title>
+  <link rel="stylesheet" href="css/calibrate.css">
+</head>
+<body>
+  <header>
+    <h1> Building Door Calibration</h1>
+    <nav>
+      <a href="/" class="btn-back">← Back to Dashboard</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Control Panel -->
+    <section class="control-section">
+      <h2>Calibration Setup</h2>
+      <div class="control-panel">
+        <div class="form-group">
+          <label for="buildingSelect">
+            <span class="label-icon">🏢</span>
+            Select Building
+          </label>
+          <select id="buildingSelect" class="form-control">
+            <option value="">-- Select Building --</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="videoUpload">
+            <span class="label-icon">📹</span>
+            Upload Video
+          </label>
+          <div class="file-input-wrapper">
+            <input type="file" id="videoUpload" accept="video/mp4,video/avi,video/mov" class="file-input">
+            <label for="videoUpload" class="file-input-label">
+              <span class="file-icon">📁</span>
+              <span class="file-text">Choose Video File</span>
+            </label>
+          </div>
+          <span id="uploadStatus" class="upload-status"></span>
+        </div>
+
+        <div class="button-group">
+          <button id="loadBtn" class="btn btn-primary">
+            <span class="btn-icon">▶️</span>
+            Load Video
+          </button>
+          <button id="saveBtn" class="btn btn-success">
+            <span class="btn-icon">💾</span>
+            Save Calibration
+          </button>
+          <button id="clearBtn" class="btn btn-danger">
+            <span class="btn-icon">🗑️</span>
+            Clear
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Building Information Panel -->
+    <section class="info-section">
+      <h2>Building Information</h2>
+      <div class="info-panel">
+        <div class="info-grid">
+          <div class="info-item">
+            <span class="info-label">Building ID</span>
+            <span class="info-value" id="infoBuildingId">—</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">Building Name</span>
+            <span class="info-value" id="infoBuildingName">—</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">Video Status</span>
+            <span class="info-value" id="infoVideoName">Not uploaded</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">Calibration Status</span>
+            <span class="info-value status-badge" id="infoCalibrationStatus">Not calibrated</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Video Calibration Area -->
+    <section class="video-section">
+      <h2>Video Calibration Area</h2>
+      <div class="video-container">
+        <div class="video-wrapper">
+          <video id="calibrationVideo" muted></video>
+          <canvas id="overlay"></canvas>
+        </div>
+        <div class="video-placeholder" id="videoPlaceholder">
+          <div class="placeholder-content">
+            <span class="placeholder-icon">🎬</span>
+            <p class="placeholder-title">Ready to Calibrate</p>
+            <p class="placeholder-text">Select a building and upload a video to begin</p>
+            <div class="placeholder-steps">
+              <span class="step">1️⃣ Select building</span>
+              <span class="step">2️⃣ Upload video</span>
+              <span class="step">3️⃣ Draw door area</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Instructions -->
+    <section class="instructions-section">
+      <h2>📖 How to Calibrate</h2>
+      <div class="instructions-grid">
+        <div class="instruction-card">
+          <div class="instruction-number">1</div>
+          <h3>Select Building</h3>
+          <p>Choose the building you want to calibrate from the dropdown menu</p>
+        </div>
+        <div class="instruction-card">
+          <div class="instruction-number">2</div>
+          <h3>Upload Video</h3>
+          <p>Upload a video showing the entrance door (Max 100MB, MP4/AVI/MOV)</p>
+        </div>
+        <div class="instruction-card">
+          <div class="instruction-number">3</div>
+          <h3>Load & Draw</h3>
+          <p>Click "Load Video" and draw a rectangle around the door area</p>
+        </div>
+        <div class="instruction-card">
+          <div class="instruction-number">4</div>
+          <h3>Save Calibration</h3>
+          <p>Click "Save Calibration" to store the door area configuration</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Peraverse AI Vision System - Multi-Building People Counter</p>
+  </footer>
+
+  <script src="js/calibrate.js"></script>
+</body>
+</html>

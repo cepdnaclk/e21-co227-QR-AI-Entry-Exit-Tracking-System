@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI People Counter Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <h1> AI People Counter System</h1>
+      <p class="header-subtitle">Real-time Building Occupancy Monitoring</p>
+    </div>
+    <nav>
+      <a href="/calibrate.html" class="btn-calibrate">
+        <span class="btn-icon"></span>
+        Calibrate Buildings
+      </a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Control Panel -->
+    <section class="control-panel">
+      <h2> Control Panel</h2>
+      <div class="controls">
+        <div class="form-group">
+          <label for="buildingSelect">
+            <span class="label-icon"></span>
+            Building
+          </label>
+          <select id="buildingSelect" class="form-control">
+            <option value="">-- Select Building --</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="directionSelect">
+            <span class="label-icon">🔄</span>
+            Direction
+          </label>
+          <select id="directionSelect" class="form-control">
+            <option value="IN">IN (Entrance)</option>
+            <option value="OUT">OUT (Exit)</option>
+          </select>
+        </div>
+        
+        <div class="button-group">
+          <button id="startBtn" class="btn btn-start">
+            <span class="btn-icon">▶️</span>
+            Start Counting
+          </button>
+          <button id="stopBtn" class="btn btn-stop">
+            <span class="btn-icon">⏹️</span>
+            Stop
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Live Statistics -->
+    <section class="statistics">
+      <div class="section-header">
+        <h2> Live Statistics</h2>
+        <div class="building-badge">
+          <span class="badge-label">Selected Building:</span>
+          <span id="currentBuildingName" class="badge-value">No Building Selected</span>
+        </div>
+      </div>
+      
+      <div class="stats-grid">
+        <div class="stat-card occupancy">
+          <div class="stat-icon">👥</div>
+          <h3>Current Occupancy</h3>
+          <p id="currentOccupancy" class="stat-value">—</p>
+          <span class="stat-label">People Inside Building</span>
+        </div>
+        
+        <div class="stat-card direction">
+          <div class="stat-icon">🔄</div>
+          <h3>Monitoring Direction</h3>
+          <p id="statusDirection" class="stat-value">—</p>
+          <span class="stat-label">Current Detection Mode</span>
+        </div>
+        
+        <div class="stat-card entered">
+          <div class="stat-icon">➡️</div>
+          <h3>Entered (Session)</h3>
+          <p id="enterCount" class="stat-value">0</p>
+          <span class="stat-label">People Entered This Session</span>
+        </div>
+        
+        <div class="stat-card exited">
+          <div class="stat-icon">⬅️</div>
+          <h3>Exited (Session)</h3>
+          <p id="exitCount" class="stat-value">0</p>
+          <span class="stat-label">People Exited This Session</span>
+        </div>
+      </div>
+      
+      <div class="status-indicator">
+        <div class="status-content">
+          <span class="status-icon">🔴</span>
+          <span class="status-text">Counting Status:</span>
+          <span id="statusRunning" class="status-badge off">Stopped</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Live Feed -->
+    <section class="video-section">
+      <h2>📹 Live Detection Feed</h2>
+      <div class="video-container">
+        <img 
+          id="videoFeed" 
+          src="" 
+          alt="AI Live Feed"
+          class="video-feed"
+        >
+        <div id="noFeedMessage" class="no-feed">
+          <div class="no-feed-content">
+            <span class="no-feed-icon">🎬</span>
+            <p class="no-feed-title">No Active Feed</p>
+            <p class="no-feed-text">Select a building and start counting to see live detection</p>
+            <div class="no-feed-steps">
+              <span class="step">1️⃣ Select building</span>
+              <span class="step">2️⃣ Choose direction</span>
+              <span class="step">3️⃣ Click start</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="video-info">
+        <div class="info-item">
+          <span class="info-icon">🟢</span>
+          <span class="info-text">Green Box = Person in door area</span>
+        </div>
+        <div class="info-item">
+          <span class="info-icon">🔴</span>
+          <span class="info-text">Red Box = Person outside door area</span>
+        </div>
+        <div class="info-item">
+          <span class="info-icon">💛</span>
+          <span class="info-text">Yellow Line = Counting trigger line</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>© 2025 Peraverse AI Vision System</p>
+      <p class="footer-tagline">Intelligent Building Occupancy Management</p>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

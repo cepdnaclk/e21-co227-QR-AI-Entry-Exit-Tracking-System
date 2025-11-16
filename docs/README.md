@@ -1,6 +1,5 @@
 ---
 layout: home
-permalink: index.html
 
 repository-name: e21-co227-QR-AI-Entry-Exit-Tracking-System
 title: Smart Occupancy Management System (Team 10)

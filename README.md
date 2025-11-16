@@ -35,13 +35,7 @@ This report outlines the evolution of the Smart Occupancy Management System, det
 ---
 
 ## Links
-
-- **Mobile Front-End (MIT App Inventor)**  
-  
-
-- **Backend (Supabase & Database Structure)**  
-  
-
-- [Department of Computer Engineering](http://www.ce.pdn.ac.lk/)  
+- [Front-End]()
+- [Back-End]()
+- [Department of Computer Engineering](http://www.ce.pdn.ac.lk/)
 - [University of Peradeniya](https://eng.pdn.ac.lk/)
-

@@ -34,7 +34,7 @@ This report outlines the evolution of the Smart Occupancy Management System, det
 ---
 
 ## Links
-- [Front-End]()
-- [Back-End]()
+- [Mobile App](https://github.com/cepdnaclk/e21-co227-QR-AI-Entry-Exit-Tracking-System/tree/main/Mobile%20App)
+- [AI Integrated Web App](https://github.com/cepdnaclk/e21-co227-QR-AI-Entry-Exit-Tracking-System/tree/main/AI%20Integrated%20Web%20App)
 - [Department of Computer Engineering](http://www.ce.pdn.ac.lk/)
 - [University of Peradeniya](https://eng.pdn.ac.lk/)

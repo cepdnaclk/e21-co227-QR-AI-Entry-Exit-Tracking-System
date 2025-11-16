@@ -2,50 +2,47 @@
 layout: home
 permalink: index.html
 
-# Please update this with your repository name and title
-repository-name: eYY-XXX-project-template
-title:
+repository-name: e21-co227-QR-AI-Entry-Exit-Tracking-System
+title: Smart Occupancy Management System (Team 10)
 ---
 
-[comment]: # "This is the standard layout for the project, but you can clean this and use your own template"
-
-# Project Title
+# Smart Occupancy Management System (Team 10)
 
 ---
-
-<!-- 
-This is a sample image, to show how to add images to your page. To learn more options, please refer [this](https://projects.ce.pdn.ac.lk/docs/faq/how-to-add-an-image/)
-
-![Sample Image](./images/sample.png)
- -->
 
 ## Team
--  eNumber, Name, [email](mailto:name@email.com)
--  eNumber, Name, [email](mailto:name@email.com)
--  eNumber, Name, [email](mailto:name@email.com)
 
-## Table of Contents
-1. [Introduction](#introduction)
-2. [Other Sub Topics](#other-sub-topics)
-3. [Links](#links)
+- **E/21/229** – Kurera P.A.T., [e21229@eng.pdn.ac.lk](mailto:e21229@eng.pdn.ac.lk)
+- **E/21/287** – Perera G.S.H., [e21287@eng.pdn.ac.lk](mailto:e21287@eng.pdn.ac.lk)
+- **E/21/350** – Samarawickrama G.B.B.P., [e21350@eng.pdn.ac.lk](mailto:e21350@eng.pdn.ac.lk)
+- **E/21/428** – Weerasooriya S.C., [e21428@eng.pdn.ac.lk](mailto:e21428@eng.pdn.ac.lk)
 
 ---
 
-## Introduction
+## Project Overview
 
- description of the real world problem and solution, impact
+The **Smart Occupancy Management System** is a cloud-based solution designed to track building occupancy in real time.  
+It initially began as a **QR-based entry/exit tracking app**, then evolved into a more **automated system** powered by **Supabase** for instant database updates, analytics, and real-time capacity monitoring.
 
-## Other Sub Topics
+The system helps organizations monitor room usage, manage crowd limits, and enhance operational efficiency with live tracking dashboards.
 
-.....
+---
 
-## Links
+## Key Features
 
-- [Project Repository](https://github.com/cepdnaclk/{{ page.repository-name }}){:target="_blank"}
-- [Project Page](https://cepdnaclk.github.io/{{ page.repository-name}}){:target="_blank"}
-- [Department of Computer Engineering](http://www.ce.pdn.ac.lk/)
-- [University of Peradeniya](https://eng.pdn.ac.lk/)
+- **QR-based Entry/Exit Scanning (Mobile App – MIT App Inventor)**
+- **Real-time Occupancy Monitoring via Supabase**
+- **Instant Database Updates**
+- **Automated Logging of User Movements**
+- **Cloud Dashboard Support (Future-ready)**
+- **Secure User Management & Authentication**
+- **Lightweight, Easy-to-Deploy Mobile Version**
 
+---
 
-[//]: # (Please refer this to learn more about Markdown syntax)
-[//]: # (https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+## Technologies Used
+
+- **MIT App Inventor** – Mobile Application Development  
+- **Supabase** – Database, Auth, and Real-time Updates  
+- **Cloud-based Deployment**  
+- **JSON API endpoints** for logs and updates  

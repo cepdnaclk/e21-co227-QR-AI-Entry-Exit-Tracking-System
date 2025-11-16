@@ -46,3 +46,10 @@ The system helps organizations monitor room usage, manage crowd limits, and enha
 - **Supabase** – Database, Auth, and Real-time Updates  
 - **Cloud-based Deployment**  
 - **JSON API endpoints** for logs and updates  
+
+## Links
+
+- [Project Repository](https://github.com/cepdnaclk/)
+- [Project Page](https://cepdnaclk.github.io/)
+- [Department of Computer Engineering](http://www.ce.pdn.ac.lk/)
+- [University of Peradeniya](https://eng.pdn.ac.lk/)

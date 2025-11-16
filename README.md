@@ -29,9 +29,8 @@ This report outlines the evolution of the Smart Occupancy Management System, det
 
 ## Project Supervisors
 
-- [Prof. Roshan G. Ragel](https://people.ce.pdn.ac.lk/staff/academic/roshan-ragel/)  
-- [Dr. Isuru Navinne](https://people.ce.pdn.ac.lk/staff/academic/isuru-nawinne/)
-
+- [Prof. Roshan G. Ragel](https://people.ce.pdn.ac.lk/staff/academic/roshan-ragel/)
+- [Ms. Yasodha Vimukthi](https://people.ce.pdn.ac.lk/staff/academic/yasodha-vimukthi/)
 ---
 
 ## Links

@@ -1,5 +1,5 @@
 ___
-# Smart Occupancy Management System – Mobile Application
+# Smart Occupancy Management System
 ___
 
 ## Introduction
@@ -20,10 +20,10 @@ This report outlines the evolution of the Smart Occupancy Management System, det
 
 ## Team Members
 
-- **E/21/229** – [Kurera P.A.T.](https://people.ce.pdn.ac.lk/students/e21/229/) — [e21229@eng.pdn.ac.lk](mailto:e21229@eng.pdn.ac.lk)  
-- **E/21/287** – [Perera G.S.H.](https://people.ce.pdn.ac.lk/students/e21/287/) — [e21287@eng.pdn.ac.lk](mailto:e21287@eng.pdn.ac.lk)  
-- **E/21/350** – [Samarawickrama G.B.B.P.](https://people.ce.pdn.ac.lk/students/e21/350/) — [e21350@eng.pdn.ac.lk](mailto:e21350@eng.pdn.ac.lk)  
-- **E/21/428** – [Weerasooriya S.C.](https://people.ce.pdn.ac.lk/students/e21/428/) — [e21428@eng.pdn.ac.lk](mailto:e21428@eng.pdn.ac.lk)
+- **E/21/229** [Kurera P.A.T.](https://people.ce.pdn.ac.lk/students/e21/229/) [e21229@eng.pdn.ac.lk](mailto:e21229@eng.pdn.ac.lk)  
+- **E/21/287** [Perera G.S.H.](https://people.ce.pdn.ac.lk/students/e21/287/) [e21287@eng.pdn.ac.lk](mailto:e21287@eng.pdn.ac.lk)  
+- **E/21/350** [Samarawickrama G.B.B.P.](https://people.ce.pdn.ac.lk/students/e21/350/) [e21350@eng.pdn.ac.lk](mailto:e21350@eng.pdn.ac.lk)  
+- **E/21/428** [Weerasooriya S.C.](https://people.ce.pdn.ac.lk/students/e21/428/) [e21428@eng.pdn.ac.lk](mailto:e21428@eng.pdn.ac.lk)
 
 ---
 
@@ -37,10 +37,10 @@ This report outlines the evolution of the Smart Occupancy Management System, det
 ## Links
 
 - **Mobile Front-End (MIT App Inventor)**  
-  *(Add GitHub or APK link here)*
+  
 
 - **Backend (Supabase & Database Structure)**  
-  *(Add documentation or repo link here)*
+  
 
 - [Department of Computer Engineering](http://www.ce.pdn.ac.lk/)  
 - [University of Peradeniya](https://eng.pdn.ac.lk/)

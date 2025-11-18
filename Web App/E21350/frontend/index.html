@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#4361ee">
+    <title>QR Building Access System</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="images/logo.png" type="image/png">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="images/logo.png" alt="QR Building Access System Logo" class="header-logo">
+            <div>
+                <h1>Building Access System</h1>
+                <p>Scan QR codes or manually enter counts to track entry and exit</p>
+            </div>
+        </header>
+
+        <div class="dashboard">
+            <details class="card scanner-section" open>
+                <summary>
+                    <h2>Building Occupancy</h2>
+                </summary>
+                <ul id="building-list" class="building-list" aria-live="polite"></ul>
+            </details>
+
+            <details class="card scanner-section">
+                <summary>
+                    <h2>Building Selection</h2>
+                </summary>
+                <div class="form-group">
+                    <label for="building-select">Select Building</label>
+                    <select id="building-select" aria-label="Select a building">
+                        <option value="" disabled selected>Loading buildings...</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Current Mode</label>
+                    <div id="current-mode" class="scan-result" aria-live="polite">Mode: Entry</div>
+                </div>
+                <div class="direction-buttons">
+                    <button id="btn-direction-in" class="btn-direction btn-in active" aria-pressed="true">Entry</button>
+                    <button id="btn-direction-out" class="btn-direction btn-out" aria-pressed="false">Exit</button>
+                </div>
+            </details>
+
+            <details class="card scanner-section">
+                <summary>
+                    <h2>QR Code Scanner</h2>
+                </summary>
+                <div id="qr-reader"></div>
+                <div id="camera-error" class="error-message">
+                    Camera not supported on this device. Please use manual entry.
+                </div>
+                <div class="scanner-actions">
+                    <button id="btn-toggle-scanner" class="btn-primary">Start Scanner</button>
+                </div>
+                <div class="manual-input">
+                    <h3>Manual Entry</h3>
+                    <div class="form-group">
+                        <label for="manual-count">Enter Number of People</label>
+                        <input type="number" id="manual-count" min="1" placeholder="Enter count" aria-label="Number of people">
+                        <button id="btn-manual-submit">Submit</button>
+                    </div>
+                </div>
+                <div id="scan-result" class="scan-result" aria-live="polite"></div>
+            </details>
+
+            <details class="card">
+                <summary>
+                    <h2>Recent Activity</h2>
+                </summary>
+                <div id="logs-container" class="logs-container" aria-live="polite">
+                    <div class="log-item">No activity yet</div>
+                </div>
+            </details>
+        </div>
+
+        <footer>
+            Building Access System © 2023
+        </footer>
+    </div>
+
+    <script src="https://unpkg.com/html5-qrcode@2.3.8/html5-qrcode.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/scanner.js"></script>
+    <script src="js/ui.js"></script>
+</body>
+</html>

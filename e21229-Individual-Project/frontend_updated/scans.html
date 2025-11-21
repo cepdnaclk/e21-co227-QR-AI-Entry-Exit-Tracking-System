@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recent Scans - Visitor Tracking System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1> Recent Visitor Scans</h1>
+
+    <table id="scansTable">
+      <thead>
+        <tr>
+          <th>Tag ID</th>
+          <th>Location</th>
+          <th>Direction</th>
+          <th>Scan Time</th>
+        </tr>
+      </thead>
+      <tbody id="scanBody"></tbody>
+    </table>
+
+    <!--<button onclick="window.location.href='index.html'"> Back to Scanner</button>-->
+
+    <a href = "index2.html"><button> Back to Scanner</button></a>
+
+  </div>
+
+  <script>
+    const API_BASE = "http://localhost:3000/api";
+
+    async function loadScans() {
+      const res = await fetch(`${API_BASE}/rfid-scans`);
+      const data = await res.json();
+
+      const scanBody = document.getElementById("scanBody");
+      scanBody.innerHTML = "";
+      if (data.success) {
+        data.data.forEach((scan) => {
+          const row = `<tr>
+            <td>${scan.tag_id}</td>
+            <td>${scan.location}</td>
+            <td>${scan.direction || "-"}</td>
+            <td>${new Date(scan.scan_time).toLocaleString()}</td>
+          </tr>`;
+          scanBody.innerHTML += row;
+        });
+      }
+    }
+
+    // Load on page open
+    loadScans();
+
+    // Auto refresh every 10 seconds
+    setInterval(loadScans, 10000);
+  </script>
+</body>
+</html>

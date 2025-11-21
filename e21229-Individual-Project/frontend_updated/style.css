@@ -1,0 +1,85 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f8fafc; /* gives a light bluish-gray background color for the whole */
+  color: #333;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+/*  .container — targets the <div class="container"> wrapping all content.*/
+.container {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* centers the title horizontally. */
+h1 {
+  text-align: center;
+  color: #0078d4;
+ 
+}
+
+
+/* Adds space below the form so the table doesn’t touch it.*/
+form {
+  margin-bottom: 20px;
+}
+
+
+/* Adds vertical spacing between each input block (Location, Reader ID, etc.). */
+.input-group {
+  margin: 10px 0;
+}
+/* ensures each label sits on its own line above the input.*/
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+/* input fields stretch to the full width of the container.*/
+input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background: #0078d4;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer; /* changes cursor to hand icon when hovering.*/
+}
+
+button:hover {
+  background: #005fa3; /* When hovered, background changes to a darker blue #005fa3.*/
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+/* Applies to both <th> (headers) and <td> (data cells).*/
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+/* Gives the header row (column titles) a light gray background.*/
+
+.centered-image {
+    display: block; 
+    margin-left: auto;
+    margin-right: auto;
+}

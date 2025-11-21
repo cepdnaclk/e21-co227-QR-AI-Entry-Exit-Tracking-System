@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Visitor Tracking System</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://unpkg.com/html5-qrcode"></script>   <!-- the HTML library to enable QR code scanning  -->
+</head>
+
+<body>
+  <div class="container">
+    <h1> Visitor Tracking System</h1>
+
+
+    <!-- Taking the inputs from the users (start form)  -->
+
+
+    <form id="scanForm">
+      <!-- Location -->
+      <div class="input-group">
+        <label>Location:</label>
+        <input type="text" id="location" placeholder="Enter location" required />
+      </div>
+
+      <!-- Reader ID -->
+      <div class="input-group">
+        <label>Reader ID:</label>
+        <input type="text" id="readerId" value="Reader-01" required />
+      </div>
+
+      <!-- Tag ID -->
+      <div class="input-group">
+        <label>Tag ID:</label>
+        <input type="text" id="tagId" placeholder="Scan or enter Tag ID" required />
+      </div>
+
+      <!-- Direction -->
+      <div class="input-group">
+        <label for="direction">Direction:</label>
+        <select id="direction" name="direction" required>   <!-- Drop down box  -->
+          <option value="entry">Entry</option>    <!-- options in the dropdown  -->
+          <option value="exit">Exit</option>
+        </select>
+      </div>
+
+      <!-- QR Code Scanner -->
+      <h2>Scan QR Code</h2>
+      <div id="reader" style="width:300px; margin:auto;"></div>  <!--  area where the live camera feed will show and the QR code will be detected (handled by JavaScript and the html5-qrcode library). -->
+      <p id="scanResult"></p>    <!-- display the result -->
+      <button id="startScanBtn" type="button">Start Scanning</button>
+      <button id="stopScanBtn" type="button" style="display:none;">Stop</button>  <!-- this button is hidden initially -->
+
+      <!-- Submit Button -->
+      <button type="submit">Submit Scan</button>
+    </form>
+
+    <!-- Recent Scans Table -->
+    <h2>Recent Scans</h2>
+    
+    <!--  can add a new page -->
+    
+
+    <table id="scansTable">
+      <thead>
+        <tr>
+          <th>Tag ID</th>
+          <th>Location</th>
+          <th>Direction</th> 
+          <th>Scan Time</th>
+        </tr>
+      </thead>
+      <tbody id="scanBody"></tbody> <!-- Body of the table -->
+    </table>
+  </div>
+
+  <script src="script.js"></script>   <!-- links to the script.js file -->
+</body>
+</html>

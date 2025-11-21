@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Visitor Tracking System</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel ="icon" href="images.png" type="image/png"/>
+  <script src="https://unpkg.com/html5-qrcode"></script>   <!-- the HTML library to enable QR code scanning  -->
+</head>
+
+<body>
+  <div class="container">
+    <h1> Visitor Tracking System</h1>
+    <!-- adding an image-->
+
+    <img src ="1716898622626.jpg"
+    class = "centered-image"
+    alt = "welcome image"
+    width = "400">
+
+    <!-- Taking the inputs from the users (start form)  -->
+
+
+    <form id="scanForm">
+      <!-- Location -->
+      <div class="input-group">
+        <label>Location:</label>
+        <input type="text" id="location" placeholder="Enter location" required />
+      </div>
+
+      <!-- Reader ID -->
+      <div class="input-group">
+        <label>Reader ID:</label>
+        <input type="text" id="readerId" value="Reader-01" required />
+      </div>
+
+      <!-- Tag ID -->
+      <div class="input-group">
+        <label>Tag ID:</label>
+        <input type="text" id="tagId" placeholder="Scan or enter Tag ID" required />
+      </div>
+
+      <!-- Direction -->
+      <div class="input-group">
+        <label for="direction">Direction:</label>
+        <select id="direction" name="direction" required>   <!-- Drop down box  -->
+          <option value="entry">Entry</option>    <!-- options in the dropdown  -->
+          <option value="exit">Exit</option>
+        </select>
+      </div>
+
+      <!-- QR Code Scanner -->
+      <h2>Scan QR Code</h2>
+      <div id="reader" style="width:300px; margin:auto;"></div>  <!--  area where the live camera feed will show and the QR code will be detected (handled by JavaScript and the html5-qrcode library). -->
+      <p id="scanResult"></p>    <!-- display the result -->
+      <button id="startScanBtn" type="button" style="margin-right: 10px;">Start Scanning</button>
+      <button id="stopScanBtn" type="button" style="display:none;">Stop</button>  <!-- this button is hidden initially -->
+
+      <!-- Submit Button -->
+      <button type="submit">Submit Scan</button>
+    </form>
+
+    <!--  can add a new page -->
+    <a href = "scans.html"><button>View All Scans</button></a>
+
+  </div>
+
+  <script src="script.js"></script>   <!-- links to the script.js file -->
+</body>
+</html>

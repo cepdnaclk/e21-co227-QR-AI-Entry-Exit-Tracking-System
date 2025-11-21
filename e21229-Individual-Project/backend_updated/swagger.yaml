@@ -1,0 +1,179 @@
+openapi: 3.0.3
+info:
+  title: RFID API
+  version: 1.0.0
+  description: |
+    OpenAPI specification for the RFID API project (from user's rfid-api repository).
+    Endpoints included: root health check, insert RFID scan, list scans, building crowd summary,
+    visitor last-location and visitor info.
+servers:
+  - url: http://localhost:3000
+    description: Local development server
+components:
+  schemas:
+    RfidScanInput:
+      type: object
+      required:
+        - tag_id
+        - reader_id
+        - location
+      properties:
+        tag_id:
+          type: string
+          example: "00098"
+        reader_id:
+          type: string
+          example: "reader-01"
+        location:
+          type: string
+          example: "DO1"
+        direction:
+          type: string
+          enum:
+            - entry
+            - exit
+
+    RfidScan:
+      allOf:
+        - $ref: '#/components/schemas/RfidScanInput'
+        - type: object
+          properties:
+            scan_time:
+              type: string
+              format: date-time
+              example: "2025-10-15T08:45:00Z"
+            id:
+              type: integer
+              example: 42
+    Visitor:
+      type: object
+      properties:
+        tag_id:
+          type: string
+          example: "ABC123"
+        name:
+          type: string
+          example: "John Doe"
+        batch:
+          type: string
+          example: "2025"
+        category:
+          type: string
+          example: "Student"
+    VisitorLastLocation:
+      type: object
+      properties:
+        tag_id:
+          type: string
+        name:
+          type: string
+        batch:
+          type: string
+        category:
+          type: string
+        location:
+          type: string
+        scan_time:
+          type: string
+          format: date-time
+    BuildingCrowdItem:
+      type: object
+      properties:
+        location:
+          type: string
+        count:
+          type: integer
+paths:
+  /:
+    get:
+      summary: Root / health check
+      responses:
+        '200':
+          description: API is running
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: "RFID API is running "
+  /api/rfid-scan:
+    post:
+      summary: Insert RFID scan
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RfidScanInput'
+      responses:
+        '200':
+          description: Scan saved successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                    example: true
+                  data:
+                    $ref: '#/components/schemas/RfidScan'
+        '400':
+          description: Bad request (validation)
+        '500':
+          description: Server error
+  /api/rfid-scans:
+    get:
+      summary: List recent RFID scans
+      parameters:
+        - in: query
+          name: limit
+          schema:
+            type: integer
+            default: 50
+          description: Max number of scans to return
+        - in: query
+          name: since
+          schema:
+            type: string
+            format: date-time
+          description: Return scans since this timestamp
+      responses:
+        '200':
+          description: Array of RFID scans
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/RfidScan'
+  /api/building-crowd:
+    get:
+      summary: Get crowd count summary by location
+      responses:
+        '200':
+          description: List of locations with counts
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/BuildingCrowdItem'
+  /api/visitor/{tag_id}/last-location:
+    get:
+      summary: Get visitor last known location and info
+      parameters:
+        - in: path
+          name: tag_id
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Visitor info with last location
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VisitorLastLocation'
+        '404':
+          description: Visitor not found
+  

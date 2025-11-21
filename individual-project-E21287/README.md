@@ -1,4 +1,4 @@
-# Welcome to EngEx Crowd Management System Website
+# Welcome to EngEx Crowd Management System Web app
 
 **Use your preferred IDE**
 
@@ -17,5 +17,6 @@ This project is built with:
 - React
 - shadcn-ui
 - Tailwind CSS
+
 
 
